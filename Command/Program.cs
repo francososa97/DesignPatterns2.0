@@ -1,9 +1,14 @@
 ﻿namespace CommandPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Command convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Es útil para parametrizar métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud, y soportar operaciones de deshacer.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Command, que convierte una solicitud en un objeto independiente, permitiendo parametrizar, retrasar o deshacer la ejecución de una solicitud.");
         // Crear el invocador
         var invoker = new Invoker();
 

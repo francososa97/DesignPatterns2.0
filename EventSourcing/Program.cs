@@ -1,9 +1,14 @@
 ﻿namespace EventSourcingPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Event Sourcing almacena el estado de un sistema como una secuencia de eventos. Es útil para garantizar que el estado del sistema pueda ser reconstruido o revertido en cualquier momento.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Event Sourcing, que almacena el estado de un sistema como una secuencia de eventos.");
         // Crear una cuenta bancaria
         var account = new BankAccount();
 

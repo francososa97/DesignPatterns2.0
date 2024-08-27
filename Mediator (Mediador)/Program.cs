@@ -1,9 +1,13 @@
 ﻿namespace MediatorPattern;
-
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Mediator define un objeto que encapsula cómo interactúan un conjunto de objetos. Es útil para reducir las dependencias entre objetos al hacer que se comuniquen únicamente a través del mediador.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Mediator, que define un objeto que encapsula cómo interactúan un conjunto de objetos, reduciendo las dependencias directas entre ellos.");
         // Crear el mediador
         var chatRoom = new ChatRoomMediator();
 

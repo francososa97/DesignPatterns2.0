@@ -1,9 +1,14 @@
 ﻿namespace Template_Method__Método_Plantilla_;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Template Method define el esqueleto de un algoritmo en una operación, dejando que las subclases implementen pasos específicos del algoritmo. Es útil cuando varias clases comparten la estructura de un algoritmo pero difieren en ciertos pasos.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Template Method, que define el esqueleto de un algoritmo en una superclase, permitiendo que las subclases implementen pasos específicos.");
         Console.WriteLine("Preparing Coffee...");
         Beverage coffee = new Coffee();
         coffee.Prepare();

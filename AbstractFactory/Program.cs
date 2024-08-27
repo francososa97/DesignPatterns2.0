@@ -1,10 +1,15 @@
 ﻿
 namespace AbstractFactoryPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Abstract Factory proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas. Es útil cuando un sistema debe ser independiente de cómo se crean sus objetos.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Abstract Factory, que proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.");
         // Crear fábrica concreta 1 y productos
         IGUIFactory factory1 = new WinFactory();
         var button1 = factory1.CreateButton();

@@ -1,10 +1,14 @@
-﻿
-namespace AdapterPattern;
+﻿namespace AdapterPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Adapter permite que interfaces incompatibles trabajen juntas al convertir la interfaz de una clase en otra esperada por el cliente. Es útil para integrar componentes que no fueron diseñados para trabajar juntos.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Adapter, que permite que interfaces incompatibles trabajen juntas al convertir la interfaz de una clase en otra esperada por el cliente.");
         // Crear un objeto de la clase Adaptee existente
         Adaptee adaptee = new Adaptee();
 

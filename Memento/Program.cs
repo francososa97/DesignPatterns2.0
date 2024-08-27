@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-namespace Memento;
+﻿namespace Memento;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Memento permite capturar y restaurar el estado interno de un objeto sin violar su encapsulamiento. Es útil para implementar funcionalidades de deshacer y rehacer, aunque puede aumentar el uso de memoria.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Memento, que permite capturar y restaurar el estado de un objeto para soportar operaciones de deshacer.");
         TextEditor editor = new TextEditor();
         Caretaker caretaker = new Caretaker();
 

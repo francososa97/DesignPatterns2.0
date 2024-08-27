@@ -1,9 +1,14 @@
 ﻿namespace BridgePattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Bridge separa la abstracción de su implementación, permitiendo que ambas evolucionen independientemente. Es útil para evitar un crecimiento exponencial en la cantidad de clases necesarias para representar combinaciones de abstracciones e implementaciones.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Bridge, que separa la abstracción de su implementación para que ambas puedan evolucionar independientemente.");
         // Crear una abstracción refinada con una implementación concreta
         Abstraction abstraction1 = new RefinedAbstraction(new ConcreteImplementorA());
         abstraction1.Operation();

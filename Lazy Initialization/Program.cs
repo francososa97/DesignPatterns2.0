@@ -1,7 +1,14 @@
-﻿class Program
+﻿namespace Lazy;
+
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Lazy Initialization retrasa la creación de un objeto hasta que se necesite por primera vez, mejorando el rendimiento y optimizando el uso de recursos. Es útil en situaciones donde un objeto puede no ser necesario durante la ejecución del programa.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Lazy Initialization, que retrasa la creación de un objeto hasta que se necesite por primera vez, optimizando el uso de recursos.");
         Console.WriteLine("Inicio de la aplicación.");
 
         // Uso de Lazy<T> para inicialización perezosa

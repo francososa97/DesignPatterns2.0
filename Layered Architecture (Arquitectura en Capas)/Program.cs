@@ -1,4 +1,4 @@
-﻿namespace LayeredArchitecture.ConsoleApp;
+﻿namespace LayeredArchitecture;
 
 // Domain Layer
 public class Person
@@ -52,10 +52,15 @@ public class PersonService
 }
 
 // Presentation Layer
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Layered Architecture organiza el sistema en capas jerárquicas donde cada capa tiene una responsabilidad específica. Promueve la separación de responsabilidades y facilita la mantenibilidad, aunque puede introducir sobrecarga si las capas no están bien definidas.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Layered Architecture, que organiza el sistema en capas jerárquicas para mejorar la separación de responsabilidades y la mantenibilidad.");
         var personService = new PersonService();
 
         personService.CreatePerson("John", "Doe");

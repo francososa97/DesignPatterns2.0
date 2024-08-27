@@ -1,80 +1,93 @@
-﻿namespace DecoratorPattern;
+﻿namespace CompositePattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Composite permite tratar objetos individuales y composiciones de objetos de manera uniforme. Es útil para representar jerarquías de objetos y tratar tanto objetos simples como compuestos de manera consistente.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
-        // Crear un objeto Component simple
-        IComponent component = new ConcreteComponent();
-        Console.WriteLine("Component básico:");
-        component.Operation();
+        Console.WriteLine("Este ejemplo demuestra el patrón Composite, que permite tratar objetos individuales y composiciones de objetos de manera uniforme.");
+        // Crear la estructura del árbol
+        var root = new Composite("Root");
 
-        // Decorar el componente con ConcreteDecoratorA
-        component = new ConcreteDecoratorA(component);
-        Console.WriteLine("\nComponent con ConcreteDecoratorA:");
-        component.Operation();
+        var leaf1 = new Leaf("Leaf 1");
+        var leaf2 = new Leaf("Leaf 2");
 
-        // Decorar el componente con ConcreteDecoratorB
-        component = new ConcreteDecoratorB(component);
-        Console.WriteLine("\nComponent con ConcreteDecoratorB:");
-        component.Operation();
+        var subTree = new Composite("SubTree");
+        var leaf3 = new Leaf("Leaf 3");
+
+        subTree.Add(leaf3);
+        root.Add(leaf1);
+        root.Add(leaf2);
+        root.Add(subTree);
+
+        // Ejecutar la operación
+        Console.WriteLine("Estructura completa:");
+        root.Operation();
 
         Console.WriteLine("Presiona cualquier tecla para salir...");
         Console.ReadKey();
     }
 }
 
-// Interfaz Component
-public interface IComponent
+// Componente base
+public abstract class Component
 {
-    void Operation();
-}
+    protected string _name;
 
-// Componente concreto
-public class ConcreteComponent : IComponent
-{
-    public void Operation()
+    public Component(string name)
     {
-        Console.WriteLine("Operación de ConcreteComponent.");
-    }
-}
-
-// Decorador base
-public abstract class Decorator : IComponent
-{
-    protected IComponent _component;
-
-    public Decorator(IComponent component)
-    {
-        _component = component;
+        _name = name;
     }
 
-    public virtual void Operation()
-    {
-        _component.Operation();
-    }
+    public abstract void Operation();
+    public virtual void Add(Component component) { }
+    public virtual void Remove(Component component) { }
+    public virtual bool IsComposite() => true;
 }
 
-// Decorador concreto A
-public class ConcreteDecoratorA : Decorator
+// Hoja (Leaf)
+public class Leaf : Component
 {
-    public ConcreteDecoratorA(IComponent component) : base(component) { }
+    public Leaf(string name) : base(name) { }
 
     public override void Operation()
     {
-        base.Operation();
-        Console.WriteLine("Adicional de ConcreteDecoratorA.");
+        Console.WriteLine($"Hoja: {_name}");
+    }
+
+    public override bool IsComposite()
+    {
+        return false;
     }
 }
 
-// Decorador concreto B
-public class ConcreteDecoratorB : Decorator
+// Compuesto (Composite)
+public class Composite : Component
 {
-    public ConcreteDecoratorB(IComponent component) : base(component) { }
+    private readonly List<Component> _children = new List<Component>();
+
+    public Composite(string name) : base(name) { }
 
     public override void Operation()
     {
-        base.Operation();
-        Console.WriteLine("Adicional de ConcreteDecoratorB.");
+        Console.WriteLine($"Nodo Compuesto: {_name}");
+        foreach (var child in _children)
+        {
+            child.Operation();
+        }
+    }
+
+    public override void Add(Component component)
+    {
+        _children.Add(component);
+    }
+
+    public override void Remove(Component component)
+    {
+        _children.Remove(component);
     }
 }
+

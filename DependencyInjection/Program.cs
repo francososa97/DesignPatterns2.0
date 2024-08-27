@@ -1,12 +1,16 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace DependencyInjectionPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Dependency Injection permite inyectar dependencias externas en una clase, en lugar de que la propia clase cree estas dependencias. Es útil para mejorar la modularidad y la testabilidad del código.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Dependency Injection, que permite inyectar dependencias externas en una clase para mejorar la modularidad y testabilidad.");
         // Configurar el contenedor de inyección de dependencias
         var serviceProvider = new ServiceCollection()
             .AddSingleton<IMessageService, ConsoleMessageService>()

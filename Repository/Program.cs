@@ -1,9 +1,14 @@
 ﻿namespace RepositoryPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Repository abstrae la lógica de acceso a datos, proporcionando una interfaz más limpia y clara para realizar operaciones CRUD. Es útil para desacoplar la lógica de negocio de la lógica de persistencia.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Repository, que abstrae la lógica de acceso a datos y proporciona una interfaz para realizar operaciones CRUD.");
         // Crear el repositorio de usuarios
         IUserRepository userRepository = new UserRepository();
 

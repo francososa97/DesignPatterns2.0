@@ -1,9 +1,14 @@
 ﻿namespace FactoryMethodPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Factory Method define un método para crear objetos en una superclase, permitiendo que las subclases alteren el tipo de objetos que se crean. Es útil para delegar la responsabilidad de creación de objetos a las subclases.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Factory Method, que define un método para crear objetos en una superclase, pero permite que las subclases alteren el tipo de objetos que se crean.");
         // Crear una fábrica de productos de tipo ConcreteProductA
         Creator creatorA = new ConcreteCreatorA();
         IProduct productA = creatorA.FactoryMethod();

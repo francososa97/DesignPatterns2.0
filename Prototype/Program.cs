@@ -1,9 +1,13 @@
 ﻿namespace PrototypePattern;
-
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Prototype permite crear nuevos objetos copiando un objeto existente en lugar de crear instancias desde cero. Es útil cuando la creación de un objeto es costosa o compleja.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Prototype, que permite crear nuevos objetos copiando un objeto existente en lugar de crear instancias desde cero.");
         // Crear un prototipo concreto
         var originalPrototype = new ConcretePrototype("Prototype 1", 100);
         Console.WriteLine("Original Prototype:");

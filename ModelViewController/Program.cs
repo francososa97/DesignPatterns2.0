@@ -1,9 +1,14 @@
 ﻿namespace MVCPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Model-View-Controller (MVC) separa la aplicación en tres componentes principales: Modelo, Vista y Controlador. Es útil para estructurar aplicaciones de manera que la lógica de negocio esté separada de la interfaz de usuario.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Model-View-Controller (MVC), que separa la aplicación en tres componentes principales: Modelo, Vista y Controlador.");
         // Crear el modelo
         var model = new PersonModel("John Doe", 30);
 

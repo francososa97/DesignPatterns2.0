@@ -1,7 +1,13 @@
-﻿class Program
+﻿namespace MonitorObject;
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Monitor Object asegura la exclusión mutua en la ejecución de métodos, garantizando que solo un hilo pueda acceder a la vez. Es fundamental para la sincronización en aplicaciones concurrentes, aunque puede llevar a deadlocks si no se gestiona correctamente.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Monitor Object, que asegura la exclusión mutua y la sincronización en aplicaciones concurrentes.");
         MonitorObject monitorObject = new MonitorObject();
 
         // Crear múltiples hilos que acceden al mismo objeto monitorizado

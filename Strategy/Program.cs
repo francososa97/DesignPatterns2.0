@@ -1,9 +1,14 @@
 ﻿namespace StrategyPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Strategy define una familia de algoritmos, encapsula cada uno, y los hace intercambiables. Es útil para cambiar el comportamiento de un algoritmo en tiempo de ejecución.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Strategy, que define una familia de algoritmos, los encapsula y los hace intercambiables.");
         // Crear el contexto con una estrategia inicial
         var context = new Context(new ConcreteStrategyA());
         Console.WriteLine("Estrategia inicial:");

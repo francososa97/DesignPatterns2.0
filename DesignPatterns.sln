@@ -85,6 +85,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service Locator", "Service 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy (Proxy o Representante)", "Proxy (Proxy o Representante)\Proxy (Proxy o Representante).csproj", "{F6970206-D006-41FC-96E2-463540D5209F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{904BF467-AB87-4788-AB40-95AFC426F503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{A556E5D2-F788-4369-90A9-016DD2F78560}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +259,14 @@ Global
 		{F6970206-D006-41FC-96E2-463540D5209F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6970206-D006-41FC-96E2-463540D5209F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6970206-D006-41FC-96E2-463540D5209F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904BF467-AB87-4788-AB40-95AFC426F503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904BF467-AB87-4788-AB40-95AFC426F503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904BF467-AB87-4788-AB40-95AFC426F503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904BF467-AB87-4788-AB40-95AFC426F503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A556E5D2-F788-4369-90A9-016DD2F78560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A556E5D2-F788-4369-90A9-016DD2F78560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A556E5D2-F788-4369-90A9-016DD2F78560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A556E5D2-F788-4369-90A9-016DD2F78560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

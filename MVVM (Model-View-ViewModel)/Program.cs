@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+namespace Mvvm;
+
 // Modelo
 public class Product : INotifyPropertyChanged
 {
@@ -84,10 +86,14 @@ public static class ProductView
 }
 
 // Aplicación de consola
-class Program
+public class Program
 {
-    static void Main()
+    /// <summary>
+    /// El patrón MVVM separa la lógica de presentación de la interfaz de usuario del modelo de datos, utilizando una capa intermedia de ViewModel. Es útil en aplicaciones que requieren una separación clara entre la UI y la lógica de negocio.
+    /// </summary>
+    public static void Main()
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón MVVM (Model-View-ViewModel), que separa la lógica de presentación de la interfaz de usuario del modelo de datos.");
         // Crear un modelo
         var product = new Product { Name = "Laptop", Price = 1500.00 };
 

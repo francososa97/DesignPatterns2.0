@@ -5,10 +5,15 @@ using System.Threading.Tasks;
 
 namespace Producer_Consumer__Productor_Consumidor_;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Producer-Consumer desacopla la producción y el consumo de datos o tareas, permitiendo que los productores y consumidores trabajen a diferentes ritmos. Es útil en sistemas concurrentes donde la producción y el consumo no se sincronizan directamente.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Producer-Consumer, que desacopla la producción y el consumo de tareas permitiendo que trabajen a diferentes ritmos.");
         // Crear una cola bloqueante para almacenar los datos producidos
         BlockingCollection<int> blockingCollection = new BlockingCollection<int>(boundedCapacity: 5);
 

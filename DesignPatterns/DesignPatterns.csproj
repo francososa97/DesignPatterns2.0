@@ -7,4 +7,48 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj" />
+    <ProjectReference Include="..\Active Object\Active Object.csproj" />
+    <ProjectReference Include="..\Adapter\Adapter.csproj" />
+    <ProjectReference Include="..\Bridge\Bridge.csproj" />
+    <ProjectReference Include="..\Builder\Builder.csproj" />
+    <ProjectReference Include="..\ChainOfResponsibility\ChainOfResponsibility.csproj" />
+    <ProjectReference Include="..\Command\Command.csproj" />
+    <ProjectReference Include="..\Composite\Composite.csproj" />
+    <ProjectReference Include="..\CQRS (Command Query Responsibility Segregation)\CQRS (Command Query Responsibility Segregation).csproj" />
+    <ProjectReference Include="..\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\DependencyInjection\DependencyInjection.csproj" />
+    <ProjectReference Include="..\Event-Driven Architecture (Arquitectura Dirigida por Eventos)\Event-Driven Architecture (Arquitectura Dirigida por Eventos).csproj" />
+    <ProjectReference Include="..\EventSourcing\EventSourcing.csproj" />
+    <ProjectReference Include="..\Facade\Facade.csproj" />
+    <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
+    <ProjectReference Include="..\Flyweight\Flyweight.csproj" />
+    <ProjectReference Include="..\Interpreter\Interpreter.csproj" />
+    <ProjectReference Include="..\Iterator\Iterator.csproj" />
+    <ProjectReference Include="..\Layered Architecture (Arquitectura en Capas)\Layered Architecture (Arquitectura en Capas).csproj" />
+    <ProjectReference Include="..\Lazy Initialization\Lazy Initialization.csproj" />
+    <ProjectReference Include="..\Mediator (Mediador)\Mediator (Mediador).csproj" />
+    <ProjectReference Include="..\Memento\Memento.csproj" />
+    <ProjectReference Include="..\Microservices (Microservicios)\Microservices (Microservicios).csproj" />
+    <ProjectReference Include="..\ModelViewController\ModelViewController.csproj" />
+    <ProjectReference Include="..\MonitorObject\MonitorObject.csproj" />
+    <ProjectReference Include="..\MVVM (Model-View-ViewModel)\MVVM (Model-View-ViewModel).csproj" />
+    <ProjectReference Include="..\Observer\Observer.csproj" />
+    <ProjectReference Include="..\Producer-Consumer (Productor-Consumidor)\Producer-Consumer (Productor-Consumidor).csproj" />
+    <ProjectReference Include="..\Prototype\Prototype.csproj" />
+    <ProjectReference Include="..\Proxy (Proxy o Representante)\Proxy (Proxy o Representante).csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Scheduler\Scheduler.csproj" />
+    <ProjectReference Include="..\Service Locator\Service Locator.csproj" />
+    <ProjectReference Include="..\Service-Oriented Architecture (SOA)\Service-Oriented Architecture (SOA).csproj" />
+    <ProjectReference Include="..\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\State\State.csproj" />
+    <ProjectReference Include="..\Strategy\Strategy.csproj" />
+    <ProjectReference Include="..\Template Method (Método Plantilla)\Template Method (Método Plantilla).csproj" />
+    <ProjectReference Include="..\Thread Pool\Thread Pool.csproj" />
+    <ProjectReference Include="..\UnitOfWork\UnitOfWork.csproj" />
+    <ProjectReference Include="..\Visitor (Visitante)\Visitor (Visitante).csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,9 +1,14 @@
 ﻿namespace FlyweightPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Flyweight minimiza el uso de memoria compartiendo tantos datos como sea posible con otros objetos similares. Es útil cuando un gran número de objetos similares ocupa una cantidad significativa de memoria.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Flyweight, que minimiza el uso de memoria compartiendo tantos datos como sea posible con otros objetos similares.");
         // Crear la fábrica Flyweight
         var factory = new FlyweightFactory();
 

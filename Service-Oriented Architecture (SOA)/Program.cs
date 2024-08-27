@@ -1,7 +1,14 @@
-﻿class Program
+﻿
+namespace ServiceOrientedArchitecture;
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// SOA organiza aplicaciones en servicios autónomos que interactúan a través de interfaces bien definidas. Promueve la modularidad, reutilización y escalabilidad, aunque introduce complejidad en la gestión de la comunicación entre servicios.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón SOA, donde se organizan aplicaciones en servicios independientes que se comunican a través de interfaces.");
         // Crear instancias de los servicios
         UserService userService = new UserService();
         OrderService orderService = new OrderService(userService);

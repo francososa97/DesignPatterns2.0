@@ -43,10 +43,15 @@ public class ServiceLocator
 }
 
 // Aplicación de consola
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Service Locator centraliza el acceso a servicios, permitiendo registrar y obtener dependencias de manera flexible. Facilita la gestión y mantenimiento de servicios, aunque puede ocultar dependencias, lo que dificulta el testeo y mantenimiento.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Service Locator, que centraliza el acceso a servicios para facilitar su gestión y reutilización.");
         // Crear el Service Locator
         var serviceLocator = new ServiceLocator();
 

@@ -1,13 +1,14 @@
 ﻿namespace SingletonPattern;
 
-class Program
+public class Program
 {
     /// <summary>
     /// El patrón Singleton es un patrón de diseño creacional que asegura que una clase tenga una única instancia y proporciona un punto de acceso global a esa instancia. Es útil en situaciones donde tener múltiples instancias de una clase podría causar problemas, como en el caso de manejo de conexiones de base de datos, logs o configuraciones globales.
     /// </summary>
     /// <param name="args"></param>
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Singleton, que garantiza que una clase tenga solo una instancia y proporciona un punto global de acceso a esta instancia.");
         // Ejemplo de uso del Singleton
         var singleton1 = Singleton.Instance;
         var singleton2 = Singleton.Instance;

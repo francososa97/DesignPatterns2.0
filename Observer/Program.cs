@@ -1,9 +1,14 @@
 ﻿namespace ObserverPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Observer define una dependencia de uno a muchos entre objetos, de manera que cuando un objeto cambia de estado, todos sus dependientes son notificados y actualizados automáticamente. Es útil para implementar eventos o sistemas de notificación.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Observer, que define una dependencia de uno a muchos entre objetos, notificando automáticamente a sus dependientes de cualquier cambio.");
         // Crear el sujeto
         var subject = new ConcreteSubject();
 

@@ -1,9 +1,14 @@
 ﻿namespace FacadePattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Facade proporciona una interfaz simplificada a un conjunto complejo de interfaces en un subsistema. Es útil para hacer que un sistema sea más fácil de usar y entender.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Facade, que proporciona una interfaz simplificada a un conjunto complejo de interfaces en un subsistema.");
         // Crear la fachada
         var facade = new Facade();
 

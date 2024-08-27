@@ -1,6 +1,7 @@
-﻿internal class Program
+﻿namespace DesignPatterns;
+public class DesignPatterns
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
         ShowWelcomeMessage();
         ShowPatternMenu();
@@ -187,47 +188,252 @@
         }
 
         // Métodos para cada patrón de diseño
-        void ExecuteAbstractFactoryPattern() { Console.WriteLine("Ejecutando Abstract Factory..."); }
-        void ExecuteAdapterPattern() { Console.WriteLine("Ejecutando Adapter..."); }
-        void ExecuteBridgePattern() { Console.WriteLine("Ejecutando Bridge..."); }
-        void ExecuteBuilderPattern() { Console.WriteLine("Ejecutando Builder..."); }
-        void ExecuteCompositePattern() { Console.WriteLine("Ejecutando Composite..."); }
-        void ExecuteDecoratorPattern() { Console.WriteLine("Ejecutando Decorator..."); }
-        void ExecuteFacadePattern() { Console.WriteLine("Ejecutando Facade..."); }
-        void ExecuteFactoryMethodPattern() { Console.WriteLine("Ejecutando Factory Method..."); }
-        void ExecuteFlyweightPattern() { Console.WriteLine("Ejecutando Flyweight..."); }
-        void ExecuteMVCPattern() { Console.WriteLine("Ejecutando Model-View-Controller (MVC)..."); }
-        void ExecutePrototypePattern() { Console.WriteLine("Ejecutando Prototype..."); }
-        void ExecuteSingletonPattern() { Console.WriteLine("Ejecutando Singleton..."); }
-        void ExecuteObserverPattern() { Console.WriteLine("Ejecutando Observer..."); }
-        void ExecuteStatePattern() { Console.WriteLine("Ejecutando State..."); }
-        void ExecuteStrategyPattern() { Console.WriteLine("Ejecutando Strategy..."); }
-        void ExecuteTemplateMethodPattern() { Console.WriteLine("Ejecutando Template Method..."); }
-        void ExecuteVisitorPattern() { Console.WriteLine("Ejecutando Visitor..."); }
-        void ExecuteChainOfResponsibilityPattern() { Console.WriteLine("Ejecutando Chain of Responsibility..."); }
-        void ExecuteCommandPattern() { Console.WriteLine("Ejecutando Command..."); }
-        void ExecuteInterpreterPattern() { Console.WriteLine("Ejecutando Interpreter..."); }
-        void ExecuteIteratorPattern() { Console.WriteLine("Ejecutando Iterator..."); }
-        void ExecuteMediatorPattern() { Console.WriteLine("Ejecutando Mediator..."); }
-        void ExecuteMementoPattern() { Console.WriteLine("Ejecutando Memento..."); }
-        void ExecuteProxyPattern() { Console.WriteLine("Ejecutando Proxy..."); }
-        void ExecuteMVVMPattern() { Console.WriteLine("Ejecutando Model-View-ViewModel (MVVM)..."); }
-        void ExecuteRepositoryPattern() { Console.WriteLine("Ejecutando Repository..."); }
-        void ExecuteUnitOfWorkPattern() { Console.WriteLine("Ejecutando Unit of Work..."); }
-        void ExecuteDependencyInjectionPattern() { Console.WriteLine("Ejecutando Dependency Injection..."); }
-        void ExecuteServiceLocatorPattern() { Console.WriteLine("Ejecutando Service Locator..."); }
-        void ExecuteEventSourcingPattern() { Console.WriteLine("Ejecutando Event Sourcing..."); }
-        void ExecuteCQRSPattern() { Console.WriteLine("Ejecutando CQRS..."); }
-        void ExecuteLazyInitializationPattern() { Console.WriteLine("Ejecutando Lazy Initialization..."); }
-        void ExecuteActiveObjectPattern() { Console.WriteLine("Ejecutando Active Object..."); }
-        void ExecuteSchedulerPattern() { Console.WriteLine("Ejecutando Scheduler..."); }
-        void ExecuteProducerConsumerPattern() { Console.WriteLine("Ejecutando Producer-Consumer..."); }
-        void ExecuteThreadPoolPattern() { Console.WriteLine("Ejecutando Thread Pool..."); }
-        void ExecuteMonitorObjectPattern() { Console.WriteLine("Ejecutando Monitor Object..."); }
-        void ExecuteMicroservicesPattern() { Console.WriteLine("Ejecutando Microservices..."); }
-        void ExecuteSOAPattern() { Console.WriteLine("Ejecutando Service-Oriented Architecture (SOA)..."); }
-        void ExecuteEventDrivenArchitecturePattern() { Console.WriteLine("Ejecutando Event-Driven Architecture..."); }
-        void ExecuteLayeredArchitecturePattern() { Console.WriteLine("Ejecutando Layered Architecture..."); }
+        void ExecuteAbstractFactoryPattern()
+        {
+            Console.WriteLine("Ejecutando Abstract Factory...");
+            AbstractFactoryPattern.Program.Main(null);
+        }
+
+        void ExecuteAdapterPattern()
+        {
+            Console.WriteLine("Ejecutando Adapter...");
+            AdapterPattern.Program.Main(null);
+        }
+
+        void ExecuteBridgePattern()
+        {
+            Console.WriteLine("Ejecutando Bridge...");
+            BridgePattern.Program.Main(null);
+        }
+
+        void ExecuteBuilderPattern()
+        {
+            Console.WriteLine("Ejecutando Builder...");
+            BuilderPattern.Program.Main(null);
+        }
+
+        void ExecuteCompositePattern()
+        {
+            Console.WriteLine("Ejecutando Composite...");
+            CompositePattern.Program.Main(null);
+        }
+
+        void ExecuteDecoratorPattern()
+        {
+            Console.WriteLine("Ejecutando Decorator...");
+            DecoratorPattern.Program.Main(null);
+        }
+
+        void ExecuteFacadePattern()
+        {
+            Console.WriteLine("Ejecutando Facade...");
+            FacadePattern.Program.Main(null);
+        }
+
+        void ExecuteFactoryMethodPattern()
+        {
+            Console.WriteLine("Ejecutando Factory Method...");
+            FactoryMethodPattern.Program.Main(null);
+        }
+
+        void ExecuteFlyweightPattern()
+        {
+            Console.WriteLine("Ejecutando Flyweight...");
+            FlyweightPattern.Program.Main(null);
+        }
+
+        void ExecuteMVCPattern()
+        {
+            Console.WriteLine("Ejecutando Model-View-Controller (MVC)...");
+            MVCPattern.Program.Main(null);
+        }
+
+        void ExecutePrototypePattern()
+        {
+            Console.WriteLine("Ejecutando Prototype...");
+            PrototypePattern.Program.Main(null);
+        }
+
+        void ExecuteSingletonPattern()
+        {
+            Console.WriteLine("Ejecutando Singleton...");
+            SingletonPattern.Program.Main(null);
+        }
+
+        void ExecuteObserverPattern()
+        {
+            Console.WriteLine("Ejecutando Observer...");
+            ObserverPattern.Program.Main(null);
+        }
+
+        void ExecuteStatePattern()
+        {
+            Console.WriteLine("Ejecutando State...");
+            StatePattern.Program.Main(null);
+        }
+
+        void ExecuteStrategyPattern()
+        {
+            Console.WriteLine("Ejecutando Strategy...");
+            StrategyPattern.Program.Main(null);
+        }
+
+        void ExecuteTemplateMethodPattern()
+        {
+            Console.WriteLine("Ejecutando Template Method...");
+            Template_Method__Método_Plantilla_.Program.Main(null);
+        }
+
+        void ExecuteVisitorPattern()
+        {
+            Console.WriteLine("Ejecutando Visitor...");
+            Visitor.Program.Main(null);
+        }
+
+        void ExecuteChainOfResponsibilityPattern()
+        {
+            Console.WriteLine("Ejecutando Chain of Responsibility...");
+            ChainOfResponsibilityPattern.Program.Main(null);
+        }
+
+        void ExecuteCommandPattern()
+        {
+            Console.WriteLine("Ejecutando Command...");
+            CommandPattern.Program.Main(null);
+        }
+
+        void ExecuteInterpreterPattern()
+        {
+            Console.WriteLine("Ejecutando Interpreter...");
+            Interpreter.Program.Main(null);
+        }
+
+        void ExecuteIteratorPattern()
+        {
+            Console.WriteLine("Ejecutando Iterator...");
+            Iterator.Program.Main(null);
+        }
+
+        void ExecuteMediatorPattern()
+        {
+            Console.WriteLine("Ejecutando Mediator...");
+            MediatorPattern.Program.Main(null);
+        }
+
+        void ExecuteMementoPattern()
+        {
+            Console.WriteLine("Ejecutando Memento...");
+            Memento.Program.Main(null);
+        }
+
+        void ExecuteProxyPattern()
+        {
+            Console.WriteLine("Ejecutando Proxy...");
+            Proxy.Program.Main(null);
+        }
+
+        void ExecuteMVVMPattern()
+        {
+            Console.WriteLine("Ejecutando Model-View-ViewModel (MVVM)...");
+            Mvvm.Program.Main();
+        }
+
+        void ExecuteRepositoryPattern()
+        {
+            Console.WriteLine("Ejecutando Repository...");
+            RepositoryPattern.Program.Main(null);
+        }
+
+        void ExecuteUnitOfWorkPattern()
+        {
+            Console.WriteLine("Ejecutando Unit of Work...");
+            UnitOfWorkPattern.Program.Main(null);
+        }
+
+        void ExecuteDependencyInjectionPattern()
+        {
+            Console.WriteLine("Ejecutando Dependency Injection...");
+            DependencyInjectionPattern.Program.Main(null);
+        }
+
+        void ExecuteServiceLocatorPattern()
+        {
+            Console.WriteLine("Ejecutando Service Locator...");
+            Service_Locator.Program.Main(null);
+        }
+
+        void ExecuteEventSourcingPattern()
+        {
+            Console.WriteLine("Ejecutando Event Sourcing...");
+            EventSourcingPattern.Program.Main(null);
+        }
+
+        void ExecuteCQRSPattern()
+        {
+            Console.WriteLine("Ejecutando CQRS...");
+            CQRS.Program.Main(null);
+        }
+
+        void ExecuteLazyInitializationPattern()
+        {
+            Console.WriteLine("Ejecutando Lazy Initialization...");
+            Lazy.Program.Main(null);
+        }
+
+        void ExecuteActiveObjectPattern()
+        {
+            Console.WriteLine("Ejecutando Active Object...");
+            ActiveObject.Program.Main(null);
+        }
+
+        void ExecuteSchedulerPattern()
+        {
+            Console.WriteLine("Ejecutando Scheduler...");
+            Scheduler.Program.Main(null);
+        }
+
+        void ExecuteProducerConsumerPattern()
+        {
+            Console.WriteLine("Ejecutando Producer-Consumer...");
+            Producer_Consumer__Productor_Consumidor_.Program.Main(null);
+        }
+
+        void ExecuteThreadPoolPattern()
+        {
+            Console.WriteLine("Ejecutando Thread Pool...");
+            ThreadPoolPathern.Program.Main(null);
+        }
+
+        void ExecuteMonitorObjectPattern()
+        {
+            Console.WriteLine("Ejecutando Monitor Object...");
+            MonitorObject.Program.Main(null);
+        }
+
+        void ExecuteMicroservicesPattern()
+        {
+            Console.WriteLine("Ejecutando Microservices...");
+            var controller = new Microservices.InventoryController();
+            controller.Get(1);
+        }
+
+        void ExecuteSOAPattern()
+        {
+            Console.WriteLine("Ejecutando Service-Oriented Architecture (SOA)...");
+            ServiceOrientedArchitecture.Program.Main(null);
+        }
+
+        void ExecuteEventDrivenArchitecturePattern()
+        {
+            Console.WriteLine("Ejecutando Event-Driven Architecture...");
+            EventDrivenConsoleApp.Program.Main(null);
+        }
+
+        void ExecuteLayeredArchitecturePattern()
+        {
+            Console.WriteLine("Ejecutando Layered Architecture...");
+            LayeredArchitecture.Program.Main(null);
+        }
 
         void ShowWelcomeMessage()
         {

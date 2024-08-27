@@ -1,8 +1,16 @@
 ﻿using System.Collections.Concurrent;
-class Program
+
+namespace ActiveObject;
+public class Program
 {
-    static async Task Main(string[] args)
+    /// <summary>
+    /// El patrón Active Object separa la invocación de un método de su ejecución, permitiendo que los métodos se ejecuten de forma asíncrona. Esto mejora la concurrencia y la capacidad de respuesta, aunque añade complejidad en la gestión de hilos.
+    /// </summary>
+    /// <param name="args"></param>
+    /// <returns></returns>
+    public static async Task Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Active Object, que permite ejecutar métodos de forma asíncrona para mejorar la concurrencia.");
         // Crear el Active Object
         ActiveObject activeObject = new ActiveObject();
 

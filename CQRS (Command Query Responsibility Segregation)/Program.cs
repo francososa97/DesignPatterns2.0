@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace CQRS;
+
 
 // Comando para agregar un producto
 public class AddProductCommand
@@ -58,10 +58,15 @@ public class ProductQueryHandler
     }
 }
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón CQRS separa las operaciones de lectura y escritura en diferentes modelos, optimizando cada uno para sus respectivas tareas. Es útil en sistemas donde las operaciones de lectura y escritura tienen diferentes requisitos de rendimiento.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón CQRS (Command Query Responsibility Segregation), que separa las operaciones de lectura y escritura en diferentes modelos.");
         // Lista compartida de productos (actúa como nuestra "base de datos" en memoria)
         var products = new List<Product>();
 

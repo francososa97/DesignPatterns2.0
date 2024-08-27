@@ -1,9 +1,14 @@
 ﻿namespace StatePattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón State permite que un objeto altere su comportamiento cuando cambia su estado interno. Es útil para objetos que necesitan cambiar su comportamiento dinámicamente en función de su estado.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón State, que permite que un objeto altere su comportamiento cuando cambia su estado interno.");
         // Crear el contexto con un estado inicial
         var context = new Context(new ConcreteStateA());
 

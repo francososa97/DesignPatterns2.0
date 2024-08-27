@@ -1,9 +1,14 @@
 ﻿namespace ChainOfResponsibilityPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Chain of Responsibility permite que varios objetos tengan la oportunidad de manejar una solicitud, pasando la solicitud a lo largo de una cadena de manejadores hasta que uno de ellos la procesa. Es útil para desacoplar el emisor de una solicitud de sus receptores.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Chain of Responsibility, que permite que varios objetos manejen una solicitud pasando a lo largo de una cadena de manejadores.");
         // Configurar la cadena de responsabilidad
         var handler1 = new ConcreteHandler1();
         var handler2 = new ConcreteHandler2();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+namespace Visitor;
 // Interfaz Element que acepta un Visitor
 public interface IElement
 {
@@ -51,10 +52,15 @@ public class ConcreteVisitor : IVisitor
 }
 
 // Aplicación de consola
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Visitor permite definir una nueva operación sin cambiar las clases de los elementos sobre los que opera. Es útil cuando necesitas realizar operaciones sobre una estructura de objetos sin modificar sus clases.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Visitor, que permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.");
         // Crear elementos
         var elements = new List<IElement>
         {

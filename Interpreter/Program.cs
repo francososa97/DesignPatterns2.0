@@ -1,11 +1,13 @@
-﻿using System;
-namespace Interpreter;
-
-
-class Program
+﻿namespace Interpreter;
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Interpreter define una gramática para un lenguaje y proporciona un mecanismo para interpretar oraciones en ese lenguaje. Es útil para evaluar expresiones dinámicas en un lenguaje específico.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Interpreter, que permite interpretar expresiones definidas por una gramática específica.");
         // Contexto para almacenar variables (en este caso, vacío)
         var context = new Context();
 

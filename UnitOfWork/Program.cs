@@ -1,9 +1,14 @@
 ﻿namespace UnitOfWorkPattern;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Unit of Work coordina las operaciones de un grupo de repositorios, asegurando que todas las modificaciones a los datos sean realizadas en una transacción única. Es útil para manejar transacciones de manera eficiente.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Unit of Work, que coordina las operaciones de un grupo de repositorios en una única transacción.");
         using (var unitOfWork = new UnitOfWork())
         {
             // Operaciones de inserción

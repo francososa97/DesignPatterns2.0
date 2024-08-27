@@ -1,9 +1,14 @@
 ﻿namespace Scheduler;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Scheduler gestiona la ejecución de tareas distribuyéndolas de manera eficiente entre los recursos disponibles. Controla el orden y la prioridad de ejecución, mejorando la utilización de recursos, aunque puede ser complejo de implementar.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Scheduler, que gestiona la ejecución de tareas distribuyéndolas de manera eficiente según su prioridad.");
         Scheduler scheduler = new Scheduler();
 
         // Añadir tareas al planificador con diferentes prioridades

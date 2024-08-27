@@ -1,10 +1,13 @@
-﻿using System;
-using System.Threading;
-
-class Program
+﻿namespace ThreadPoolPathern;
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Thread Pool reutiliza un grupo de hilos para manejar múltiples tareas concurrentes, mejorando la eficiencia y el rendimiento. Limita la sobrecarga de creación y destrucción de hilos, aunque puede introducir latencia si la carga es alta.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Thread Pool, que mejora la eficiencia mediante la reutilización de un grupo de hilos para tareas concurrentes.");
         Console.WriteLine("Inicio de la aplicación");
 
         // Enviar varias tareas al ThreadPool

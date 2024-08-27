@@ -12,43 +12,49 @@ var app = builder.Build();
 app.MapControllers();
 app.Run();
 
-[ApiController]
-[Route("api/[controller]")]
-public class InventoryController : ControllerBase
+namespace Microservices
 {
-    private static readonly List<InventoryItem> Inventory = new List<InventoryItem>
+[ApiController]
+    [Route("api/[controller]")]
+    
+    public class InventoryController : ControllerBase
+    {
+        private static readonly List<InventoryItem> Inventory = new List<InventoryItem>
     {
         new InventoryItem { ProductId = 1, QuantityInStock = 50 },
         new InventoryItem { ProductId = 2, QuantityInStock = 30 }
     };
 
-    [HttpGet("{productId}")]
-    public ActionResult<InventoryItem> Get(int productId)
-    {
-        var item = Inventory.Find(i => i.ProductId == productId);
-        if (item == null) return NotFound();
-        return item;
+        [HttpGet("{productId}")]
+        ///El patrón Microservices divide una aplicación en un conjunto de servicios pequeños, autónomos y altamente cohesionados, que se pueden desplegar y escalar de manera independiente. Es útil para construir sistemas grandes y complejos con alta disponibilidad y escalabilidad.
+        public ActionResult<InventoryItem> Get(int productId)
+        {
+            var item = Inventory.Find(i => i.ProductId == productId);
+            if (item == null) return NotFound();
+            return item;
+        }
+
+        [HttpPost("adjust")]
+        public ActionResult AdjustStock([FromBody] StockAdjustment adjustment)
+        {
+            var item = Inventory.Find(i => i.ProductId == adjustment.ProductId);
+            if (item == null) return NotFound("Producto no encontrado en inventario.");
+
+            item.QuantityInStock += adjustment.AdjustmentAmount;
+            return Ok(item);
+        }
     }
 
-    [HttpPost("adjust")]
-    public ActionResult AdjustStock([FromBody] StockAdjustment adjustment)
+    public class InventoryItem
     {
-        var item = Inventory.Find(i => i.ProductId == adjustment.ProductId);
-        if (item == null) return NotFound("Producto no encontrado en inventario.");
-
-        item.QuantityInStock += adjustment.AdjustmentAmount;
-        return Ok(item);
+        public int ProductId { get; set; }
+        public int QuantityInStock { get; set; }
     }
-}
 
-public class InventoryItem
-{
-    public int ProductId { get; set; }
-    public int QuantityInStock { get; set; }
-}
+    public class StockAdjustment
+    {
+        public int ProductId { get; set; }
+        public int AdjustmentAmount { get; set; }
+    }
 
-public class StockAdjustment
-{
-    public int ProductId { get; set; }
-    public int AdjustmentAmount { get; set; }
 }

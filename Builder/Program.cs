@@ -1,11 +1,14 @@
-﻿using System;
+﻿namespace BuilderPattern;
 
-namespace BuilderPattern;
-
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    ///  El patrón Builder permite construir objetos complejos paso a paso, separando la construcción de la representación final. Es útil cuando un objeto puede construirse de muchas maneras diferentes.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Builder, que permite construir objetos complejos paso a paso, separando la construcción de la representación final.");
         // Crear el director y los builders
         var director = new Director();
         var carBuilder = new CarBuilder();

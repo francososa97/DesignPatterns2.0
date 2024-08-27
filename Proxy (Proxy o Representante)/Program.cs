@@ -1,4 +1,6 @@
-﻿// Interfaz común para el sujeto real y el proxy
+﻿namespace Proxy;
+
+// Interfaz común para el sujeto real y el proxy
 public interface IExpensiveService
 {
     void ProcessData();
@@ -38,10 +40,15 @@ public class ExpensiveServiceProxy : IExpensiveService
 }
 
 // Aplicación de consola
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// El patrón Proxy proporciona un sustituto o representante para otro objeto, controlando el acceso a este. Es útil para implementar controles de acceso, caché, o mejorar el rendimiento en operaciones costosas.
+    /// </summary>
+    /// <param name="args"></param>
+    public static void Main(string[] args)
     {
+        Console.WriteLine("Este ejemplo demuestra el patrón Proxy, que proporciona un sustituto o representante para otro objeto, controlando el acceso a este.");
         // Uso del proxy en lugar del servicio directo
         IExpensiveService service = new ExpensiveServiceProxy();
 
