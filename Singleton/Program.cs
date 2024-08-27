@@ -1,79 +1,55 @@
-﻿using System;
+﻿namespace SingletonPattern;
 
-namespace DesignPatterns
+class Program
 {
-    class Program
+    /// <summary>
+    /// El patrón Singleton es un patrón de diseño creacional que asegura que una clase tenga una única instancia y proporciona un punto de acceso global a esa instancia. Es útil en situaciones donde tener múltiples instancias de una clase podría causar problemas, como en el caso de manejo de conexiones de base de datos, logs o configuraciones globales.
+    /// </summary>
+    /// <param name="args"></param>
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Ejemplo de uso del Singleton
+        var singleton1 = Singleton.Instance;
+        var singleton2 = Singleton.Instance;
+
+        if (singleton1 == singleton2)
         {
-            // Mostrar la bienvenida
-            ShowWelcomeMessage();
+            Console.WriteLine("Ambas variables contienen la misma instancia.");
+        }
+        else
+        {
+            Console.WriteLine("Las variables contienen instancias diferentes.");
+        }
 
-            // Mostrar el menú de selección de patrones
-            ShowPatternMenu();
+        Console.WriteLine("Presiona cualquier tecla para salir...");
+        Console.ReadKey();
+    }
+}
+/// <summary>
+/// Constructor Privado: El constructor está marcado como privado para evitar que otras clases creen instancias directamente.
+//Propiedad Instance: Esta propiedad verifica si _instance es null. Si lo es, crea una nueva instancia de Singleton; de lo contrario, devuelve la instancia existente.
+/// </summary>
+public class Singleton
+{
+    // Campo privado para almacenar la única instancia
+    private static Singleton _instance;
 
-            // Obtener la selección del usuario
-            string selection = Console.ReadLine();
-            switch (selection)
+    // Constructor privado para evitar la creación directa
+    private Singleton()
+    {
+        Console.WriteLine("Singleton instance created.");
+    }
+
+    // Propiedad pública para acceder a la instancia
+    public static Singleton Instance
+    {
+        get
+        {
+            if (_instance == null)
             {
-                case "1":
-                    ExecuteSingletonPattern();
-                    break;
-                case "2":
-                    ExecuteFactoryPattern();
-                    break;
-                case "3":
-                    ExecuteObserverPattern();
-                    break;
-                // Agrega más casos para otros patrones de diseño
-                default:
-                    Console.WriteLine("Selección no válida. Intente de nuevo.");
-                    break;
+                _instance = new Singleton();
             }
-
-            Console.WriteLine("Presiona cualquier tecla para salir...");
-            Console.ReadKey();
+            return _instance;
         }
-
-        static void ShowWelcomeMessage()
-        {
-            Console.WriteLine("====================================");
-            Console.WriteLine(" Bienvenido al Repositorio de Patrones de Diseño ");
-            Console.WriteLine("====================================");
-            Console.WriteLine("Este repositorio tiene como objetivo explicar y demostrar");
-            Console.WriteLine("diferentes patrones de diseño mediante ejemplos prácticos.");
-            Console.WriteLine("Por favor, selecciona un patrón de diseño para ver un ejemplo:");
-            Console.WriteLine();
-        }
-
-        static void ShowPatternMenu()
-        {
-            Console.WriteLine("1. Singleton Pattern");
-            Console.WriteLine("2. Factory Pattern");
-            Console.WriteLine("3. Observer Pattern");
-            // Agrega más opciones para otros patrones de diseño
-            Console.WriteLine();
-            Console.Write("Por favor, ingrese el número de su selección: ");
-        }
-
-        static void ExecuteSingletonPattern()
-        {
-            Console.WriteLine("Ejecutando el patrón Singleton...");
-            // Aquí puedes incluir la lógica o llamar a la clase que demuestra el patrón Singleton
-        }
-
-        static void ExecuteFactoryPattern()
-        {
-            Console.WriteLine("Ejecutando el patrón Factory...");
-            // Aquí puedes incluir la lógica o llamar a la clase que demuestra el patrón Factory
-        }
-
-        static void ExecuteObserverPattern()
-        {
-            Console.WriteLine("Ejecutando el patrón Observer...");
-            // Aquí puedes incluir la lógica o llamar a la clase que demuestra el patrón Observer
-        }
-
-        // Agrega más métodos para otros patrones de diseño
     }
 }
